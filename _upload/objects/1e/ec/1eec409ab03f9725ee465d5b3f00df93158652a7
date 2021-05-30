@@ -1,0 +1,49 @@
+import { Window } from "Elementa/index"
+
+
+// MODULE LIBRARIES
+import NotificationGUI from "./gui/notification-gui"
+import SettingsGUI from "./gui/settings-gui"
+import NotificationTracker from "./notification-tracker"
+
+
+// CONSTANTS
+const _Window = new Window()
+const Settings = new SettingsGUI()
+const NotifierKeybind = new KeyBind("Quick Reply", Keyboard.KEY_GRAVE, "Notifixel")
+const NotificationSound = new Sound({
+    source: "notification.ogg",
+    category: "master"
+})
+
+
+// EVENTS 
+register('chat', (name, message) => {
+    print(message)
+    if(!Settings.getSetting("Enabled")) return
+
+    notification = new NotificationGUI(name, message, _Window, NotifierKeybind, Settings.location)
+    NotificationTracker.addNotification(notification)
+    NotificationTracker.isDrawing = true
+
+    NotificationSound.play()
+    notification.animate()
+}).setChatCriteria("&dFrom ${name}&r&7: &r${message}&r").setParameter("contains")
+
+
+register('tick', () => {
+    if (!NotificationTracker.isDrawing) return 
+
+    // Quick reply
+    if(NotifierKeybind.isPressed() && NotificationTracker.getLatestNotification()) {
+        Client.setCurrentChatMessage("/r " + NotificationTracker.getLatestNotification().rawUnformattedUsername + " ")
+    }
+})
+
+
+register('renderOverlay', () => {
+    if(NotificationTracker.isDrawing) {
+        _Window.draw()
+    }
+})
+

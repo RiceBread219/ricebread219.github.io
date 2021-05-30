@@ -1,0 +1,6 @@
+{
+  "name": "PersistantVariables",
+  "description": "Easily create variables that persist between ct reloads",
+  "author": "Ecolsson",
+  "requires": ["DeepEquals"]
+}

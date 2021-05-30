@@ -1,0 +1,14 @@
+
+ Configuration file
+
+general {
+    B:blockdisplay=false
+    B:chatpling=true
+    B:frequests=false
+    B:friendnotifications=true
+    B:lobbychat=true
+    B:notifyserver=true
+    S:notifyword=RiceBread219,joe,joseph,ricebread,bread,rice
+}
+
+

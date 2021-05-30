@@ -1,0 +1,158 @@
+// CT LIBRARIES 
+import { UIBlock, UIWrappedText, UIImage, Animations } from "Elementa/index"
+
+
+// MODULE LIBRARIES
+import NotificationTracker from "../notification-tracker"
+
+// JAVA TYPES
+const Color = Java.type("java.awt.Color")
+const URL = Java.type("java.net.URL")
+
+ 
+class NotificationGUI {
+    constructor(username, message, window, keybind, location) {
+        this.formattedUsername = username 
+        this.rawUnformattedUsername = ChatLib.removeFormatting(username).replace(/\[.+]/g, "").trim()
+        
+        // Removes last &r
+        this.message = message.slice(0, -2)
+        
+        this.window = window 
+        this.keybind = keybind
+        this.location = location
+        this.currentAnimation = null 
+        
+        // Adds [NON] as the rank of users without a rank
+        if (!this.formattedUsername.includes("[")) {
+            this.formattedUsername = this.formattedUsername.slice(0, 4) + "[NON] " + this.formattedUsername.slice(4, this.formattedUsername.length)
+        }
+
+        this.usernameText = new UIWrappedText(ChatLib.addColor(this.formattedUsername).replace(" ", "\n"))
+            .setX((-13.5).pixels(true))
+            .setY((25).pixels(true))
+            .setWidth((115).pixels())
+
+        // Colors the message if its another color otherwise plain white
+        this.messageText = new UIWrappedText(this.message.includes("&7") ? this.message.slice(2, this.message.length) : ChatLib.addColor(this.message))
+            .setX((-5).pixels(true))
+            .setY((14).pixels(true))
+            .setWidth((125).pixels())
+
+        this.noteText = new UIWrappedText("Press " + Keyboard.getKeyName(keybind.getKeyCode()) + " to reply")
+            .setX((2).pixels(true))
+            .setY((0).pixels(true))
+                 
+        this.profilePicture = UIImage.Companion.ofURL(new URL("https://minotar.net/avatar/" + this.rawUnformattedUsername))
+            .setX((105).pixels(true))
+            .setY((28).pixels(true))
+            .setWidth((15).pixels())
+            .setHeight((15).pixels())
+
+        this.timerBar = new UIBlock(Color.WHITE)
+            .setX((-0.1).pixels(true))
+            .setY((52.5).pixels(true))
+            .setWidth((130).pixels())
+            .setHeight((2.5).pixels())
+
+        this.main = new UIBlock(new Color(0.2, 0.2, 0.2))
+            .setX(location[1][0])
+            .setY(location[1][1])
+            .setWidth((135).pixels())
+            .setHeight((55).pixels())
+            .addChildren(
+                this.timerBar,
+                this.profilePicture,
+                this.usernameText,
+                this.messageText,
+                this.noteText
+            )
+        
+        this.fixMessage()
+        window.addChild(this.main)
+    }
+
+    calculateTime() {
+        // Since an average person reads 1.75 words a second, just multiply that
+        return this.message.split(" ").length * 1.75
+    }
+
+    fixMessage() {
+        // Kinda fit the message 
+        if(this.message.length > 30) {
+            this.messageText.setX((0).pixels(true))
+            this.messageText.setY((7).pixels(true))
+            this.messageText.setTextScale((0.925).pixels())
+
+            this.messageText.setText(this.message.slice(0, 27) + "...")
+        } else if (this.message.length > 25) {
+            this.messageText.setX((0).pixels(true))
+            this.messageText.setTextScale((0.925).pixels())
+        }
+    }
+
+    // The first animation
+    animate() {
+        startAnimation = this.main.makeAnimation()
+
+        animation = startAnimation.setXAnimation(
+            Animations.IN_SIN,
+            0.5,
+            this.location[2][0]
+        )
+
+        startAnimation.onComplete(() => {
+            this.timerAnimate()
+        })
+
+        this.currentAnimation = animation
+        startAnimation.begin()
+    }
+
+    // Timer animation 
+    timerAnimate() {
+        timerAnimation = this.timerBar.makeAnimation()
+
+        animation = timerAnimation.setWidthAnimation(
+            Animations.LINEAR,
+            this.calculateTime(),
+            (0).pixels()
+        )
+
+        timerAnimation.onComplete(() => {
+            this.endAnimate()
+        })
+
+        this.currentAnimation = animation
+        timerAnimation.begin()
+    }
+
+    // Final Animation
+    endAnimate() {
+        endAnimation = this.main.makeAnimation()
+                
+        animation = endAnimation.setXAnimation(
+            Animations.OUT_SIN,
+            0.5,
+            this.location[2][1]
+        )
+
+        endAnimation.onComplete(() => {
+            // Cleanup
+            this.currentAnimation = null
+            // NotificationTracker.isDrawing = false
+            NotificationTracker.removeNotification(this)
+        })
+
+        this.currentAnimation = animation
+        endAnimation.begin()
+    }
+
+    delete() {
+        // Remove notification from window
+        this.window.removeChild(this.main)
+    }
+}
+
+
+export { NotificationGUI as default }

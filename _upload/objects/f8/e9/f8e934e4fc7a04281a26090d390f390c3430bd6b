@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Notifixel",
+    "settings": [
+      {
+        "type": "toggle",
+        "name": "Enabled",
+        "value": true,
+        "hidden": false
+      },
+      {
+        "type": "string_selector",
+        "name": "Location of Notification",
+        "value": 2,
+        "options": [
+          "Top Right",
+          "Top Left",
+          "Bottom Right",
+          "Bottom Left",
+          "Middle Right",
+          "Middle Left"
+        ],
+        "hidden": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+import { SettingsObject, Setting } from "SettingsManager/SettingsManager"
+
+
+// Name, [x-location, y-location], [start-animation, end-animation]
+const SETTINGS_ENUM = Object.freeze({
+                                    "TOP_RIGHT": [
+                                        "Top Right",
+                                        [(-130).pixels(true), (10).pixels()], 
+                                        [(5).pixels(true), (-130).pixels(true)]
+                                    ], 
+                                    "TOP_LEFT": [
+                                        "Top Left",
+                                        [(-130).pixels(), (10).pixels()], 
+                                        [(5).pixels(), (-130).pixels()]
+                                    ],
+                                    "BOTTOM_RIGHT": [
+                                        "Bottom Right",
+                                        [(-130).pixels(true), (10).pixels(true)], 
+                                        [(5).pixels(true), (-130).pixels(true)]
+                                    ], 
+                                    "BOTTOM_LEFT": [
+                                        "Bottom Left",
+                                        [(-130).pixels(), (10).pixels(true)],
+                                        [(5).pixels(), (-130).pixels()]
+                                    ],
+                                    "MIDDLE_RIGHT": [
+                                        "Middle Right",
+                                        [(-130).pixels(true), (250).pixels(true)], 
+                                        [(5).pixels(true), (-130).pixels(true)]
+                                    ],
+                                    "MIDDLE_LEFT": [
+                                        "Middle Left",
+                                        [(-130).pixels(), (250).pixels(true)],
+                                        [(5).pixels(), (-130).pixels()]
+                                    ]
+                                })
+
+
+class SettingsGUI {
+    constructor() {
+        // Automatically builds string selector, so all we need to do is modify SETTINGS_ENUM
+        this.settingsGUI = new SettingsObject("Notifixel", [
+            {
+                name: "Notifixel",
+                settings: [
+                    new Setting.Toggle("Enabled", true),
+                    new Setting.StringSelector("Location of Notification", 2, Array.from(Object.keys(SETTINGS_ENUM), x => SETTINGS_ENUM[x][0])),
+                ]
+            }
+        ])
+
+        this.settingsGUI.setCommand("notifixel")
+        Setting.register(this.settingsGUI)
+        
+        // Loops through all locations, so we dont have 50 if statements
+        register("tick", () => {
+            locationSetting = this.getSetting("Location of Notification")
+            
+            for (location in SETTINGS_ENUM) {
+                if (SETTINGS_ENUM[location][0] == locationSetting) {
+                    this.location = SETTINGS_ENUM[location]
+                }
+            }
+        })
+    }
+
+    getSetting(name) {
+        return this.settingsGUI.getSetting("Notifixel", name)
+    }
+}
+
+
+export { SettingsGUI as default }

@@ -1,0 +1,57 @@
+import deepEquals from 'DeepEquals/index';
+import PersistentVariable from './PersistentVariable';
+
+const PERSISTENT_VARIABLES_FILE = ".persistantVariables.json";
+
+class PersistentVariableFactory {
+    static factories = {};
+    dirty = true;
+    cache = {};
+
+    constructor(moduleName) {
+        if (moduleName in PersistentVariableFactory.factories) {
+            return PersistentVariableFactory.factories[moduleName];
+        }
+
+        this.moduleName = moduleName;
+        PersistentVariableFactory.factories[moduleName] = this;
+    }
+
+    recache() {
+        if (!this.dirty) return;
+
+        const fileStr = FileLib.read(this.moduleName, PERSISTENT_VARIABLES_FILE);
+        if (fileStr === undefined || fileStr === null) {
+            this.cache = {};
+            FileLib.write(this.moduleName, PERSISTENT_VARIABLES_FILE, "{}");
+        } else {
+            try {
+                this.cache = JSON.parse(fileStr);
+                this.dirty = false;
+            } catch (e) {
+                throw new Error(`Unable to read persistant variables file: ${e}`);
+            }
+        }
+    }
+
+    create(varName, defaultValue) {
+        this.recache();
+
+        if (!(varName in this.cache)) {
+            this.cache[varName] = defaultValue;
+        }
+
+        return new PersistentVariable(this, this.moduleName, varName, this.cache[varName]);
+    }
+
+    set(varName, value) {
+        this.recache();
+
+        if (deepEquals(this.cache[varName], value)) return;
+
+        this.cache[varName] = value;
+        FileLib.write(this.moduleName, PERSISTENT_VARIABLES_FILE, JSON.stringify(this.cache));
+    }
+}
+
+export { PersistentVariableFactory as default };

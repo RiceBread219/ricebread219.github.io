@@ -1,0 +1,41 @@
+// CT LIBRARIES
+import PersistentVariableFactory from 'PersistentVariables/index';
+import {} from "Elementa/index"
+
+
+// CONSTANTS
+const SETTINGS_ENUM = Object.freeze({"TOP_RIGHT": [1, [(130).pixels(true), (10).pixels(true)]], 
+                                    "TOP_LEFT": [2, [(0).pixels(), (0).pixels()]], 
+                                    "BOTTOM_RIGHT": [3, [(-130).pixels(true), (10).pixels(true)]], 
+                                    "BOTTOM_LEFT": [4, [(0).pixels(), (0).pixels()]]})
+
+
+class ConfigManager {
+    constructor() {
+        this.factory = new PersistentVariableFactory("Notifixel")
+
+        this.location = this.factory.create('location', SETTINGS_ENUM.BOTTOM_RIGHT[0])
+    }
+
+    getLocation() {
+        index = this.location.get()
+
+        for(location in settingsEnum) {
+            if(settingsEnum[location][0] == index) {
+                return settingsEnum[location]
+            }
+        }
+    }
+
+    setLocation(location) {
+        this.factory.set(location[0])
+    }
+}
+
+
+// SINGLETON 
+const instance = new ConfigManager()
+Object.freeze(instance)
+
+
+export { instance as ConfigManager, SETTINGS_ENUM as LOCATIONS }

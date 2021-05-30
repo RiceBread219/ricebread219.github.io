@@ -1,0 +1,8 @@
+# Configuration file
+
+settings {
+    B:Enabled=true
+    B:SendUpdates=true
+}
+
+

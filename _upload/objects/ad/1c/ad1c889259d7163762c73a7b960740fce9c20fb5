@@ -1,0 +1,8 @@
+{
+    "name": "Notifixel",
+    "description": "Message Notifications for Hypixel",
+    "author": "SoulSen",
+    "requires": ["Elementa", "PersistentVariables", "SettingsManager"],
+    "version": "0.2.0",
+    "entry": "index.js"
+}

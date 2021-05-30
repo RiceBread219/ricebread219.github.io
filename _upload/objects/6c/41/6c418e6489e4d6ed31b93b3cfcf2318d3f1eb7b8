@@ -1,0 +1,965 @@
+{
+  "instanceDisplayX": 0.5,
+  "instanceDisplayY": 0.05,
+  "primaryColor": {
+    "color": {
+      "value": -1,
+      "frgbvalue": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fvalue": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "falpha": 1.0
+    },
+    "chromaSpeed": 0.0
+  },
+  "secondaryColor": {
+    "color": {
+      "value": -5000269,
+      "frgbvalue": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "fvalue": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "falpha": 1.0
+    },
+    "chromaSpeed": 0.0
+  },
+  "blurGuiBackgrounds": true,
+  "fadeInGuis": true,
+  "transparentBackgrounds": false,
+  "gameLogoScale": 1.0,
+  "reverseScrollingDirection": false,
+  "anyKeyClosesGui": false,
+  "compactMainMenu": false,
+  "displayInstance": false,
+  "instanceOpacity": 1.0,
+  "displayInstanceWithChatOpen": true,
+  "instanceDisplayScale": "MEDIUM",
+  "gamePriorities": {},
+  "lobbyOneSwap": false,
+  "updateNotifications": true,
+  "redesignedLobbyCommand": true,
+  "partyModeDelay": 5.0,
+  "partyModeGui": true,
+  "ingameDailyReward": true,
+  "displayOwnGlyph": true,
+  "mainMenuYPadding": 60,
+  "partyModes": [
+    {
+      "namespace": "mainLobby/quickplaylobby main 1",
+      "name": "Main Lobby - Go to Lobby One",
+      "command": "/quickplaylobby main 1"
+    },
+    {
+      "namespace": "mainLobby/quickplay limbo",
+      "name": "Main Lobby - Go to Limbo",
+      "command": "/quickplay limbo"
+    },
+    {
+      "namespace": "mainLobby/quickplay delivery",
+      "name": "Main Lobby - Delivery Menu",
+      "command": "/quickplay delivery"
+    },
+    {
+      "namespace": "mainLobby/l",
+      "name": "Main Lobby - Run Lobby Command",
+      "command": "/l"
+    },
+    {
+      "namespace": "mainLobby/stuck",
+      "name": "Main Lobby - Run /stuck",
+      "command": "/stuck"
+    },
+    {
+      "namespace": "mainLobby/party warp",
+      "name": "Main Lobby - Run /party warp",
+      "command": "/party warp"
+    },
+    {
+      "namespace": "mainLobby/replay",
+      "name": "Main Lobby - View replays",
+      "command": "/replay"
+    },
+    {
+      "namespace": "mainLobby/atlas",
+      "name": "Main Lobby - Open Atlas GUI",
+      "command": "/atlas"
+    },
+    {
+      "namespace": "arcade/quickplaylobby arcade 1",
+      "name": "Arcade - Go to Lobby One",
+      "command": "/quickplaylobby arcade 1"
+    },
+    {
+      "namespace": "arcade/play arcade_day_one",
+      "name": "Arcade - Blocking Dead",
+      "command": "/play arcade_day_one"
+    },
+    {
+      "namespace": "arcade/play arcade_bounty_hunters",
+      "name": "Arcade - Bounty Hunters",
+      "command": "/play arcade_bounty_hunters"
+    },
+    {
+      "namespace": "arcade/play arcade_pvp_ctw",
+      "name": "Arcade - Capture the Wool",
+      "command": "/play arcade_pvp_ctw"
+    },
+    {
+      "namespace": "arcade/play arcade_creeper_defense",
+      "name": "Arcade - Creeper Attack",
+      "command": "/play arcade_creeper_defense"
+    },
+    {
+      "namespace": "arcade/play arcade_dragon_wars",
+      "name": "Arcade - Dragon Wars",
+      "command": "/play arcade_dragon_wars"
+    },
+    {
+      "namespace": "arcade/play arcade_ender_spleef",
+      "name": "Arcade - Ender Spleef",
+      "command": "/play arcade_ender_spleef"
+    },
+    {
+      "namespace": "arcade/play arcade_farm_hunt",
+      "name": "Arcade - Farm Hunt",
+      "command": "/play arcade_farm_hunt"
+    },
+    {
+      "namespace": "arcade/play arcade_soccer",
+      "name": "Arcade - Football",
+      "command": "/play arcade_soccer"
+    },
+    {
+      "namespace": "arcade/play arcade_starwars",
+      "name": "Arcade - Galaxy Wars",
+      "command": "/play arcade_starwars"
+    },
+    {
+      "namespace": "arcade/play arcade_hide_and_seek_party_pooper",
+      "name": "Arcade - Hide and Seek - Party Pooper",
+      "command": "/play arcade_hide_and_seek_party_pooper"
+    },
+    {
+      "namespace": "arcade/play arcade_hide_and_seek_prop_hunt",
+      "name": "Arcade - Hide and Seek - Prop Hunt",
+      "command": "/play arcade_hide_and_seek_prop_hunt"
+    },
+    {
+      "namespace": "arcade/play arcade_hole_in_the_wall",
+      "name": "Arcade - Hole in the Wall",
+      "command": "/play arcade_hole_in_the_wall"
+    },
+    {
+      "namespace": "arcade/play arcade_simon_says",
+      "name": "Arcade - Hypixel Says",
+      "command": "/play arcade_simon_says"
+    },
+    {
+      "namespace": "arcade/play arcade_mini_walls",
+      "name": "Arcade - Mini Walls",
+      "command": "/play arcade_mini_walls"
+    },
+    {
+      "namespace": "arcade/play arcade_party_games_1",
+      "name": "Arcade - Party Games",
+      "command": "/play arcade_party_games_1"
+    },
+    {
+      "namespace": "arcade/play arcade_pixel_painters",
+      "name": "Arcade - Pixel Painters",
+      "command": "/play arcade_pixel_painters"
+    },
+    {
+      "namespace": "arcade/play arcade_throw_out",
+      "name": "Arcade - Throw Out",
+      "command": "/play arcade_throw_out"
+    },
+    {
+      "namespace": "arcade/play arcade_zombies_dead_end",
+      "name": "Arcade - Zombies - Dead End",
+      "command": "/play arcade_zombies_dead_end"
+    },
+    {
+      "namespace": "arcade/play arcade_zombies_bad_blood",
+      "name": "Arcade - Zombies - Bad Blood",
+      "command": "/play arcade_zombies_bad_blood"
+    },
+    {
+      "namespace": "arcade/play arcade_zombies_alien_arcadium",
+      "name": "Arcade - Zombies - Alien Arcadium",
+      "command": "/play arcade_zombies_alien_arcadium"
+    },
+    {
+      "namespace": "arcade/play arcade_easter_simulator",
+      "name": "Arcade - ?eEaster ?bSimulator",
+      "command": "/play arcade_easter_simulator"
+    },
+    {
+      "namespace": "bedwars/quickplaylobby bw 1",
+      "name": "Bed Wars - Go to Lobby One",
+      "command": "/quickplaylobby bw 1"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_one",
+      "name": "Bed Wars - Solo",
+      "command": "/play bedwars_eight_one"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two",
+      "name": "Bed Wars - Doubles",
+      "command": "/play bedwars_eight_two"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_three",
+      "name": "Bed Wars - 3v3v3v3",
+      "command": "/play bedwars_four_three"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four",
+      "name": "Bed Wars - 4v4v4v4",
+      "command": "/play bedwars_four_four"
+    },
+    {
+      "namespace": "bedwars/play bedwars_two_four",
+      "name": "Bed Wars - 4v4",
+      "command": "/play bedwars_two_four"
+    },
+    {
+      "namespace": "bedwars/play bedwars_practice",
+      "name": "Bed Wars - Practice",
+      "command": "/play bedwars_practice"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two_rush",
+      "name": "Bed Wars - Rush Doubles",
+      "command": "/play bedwars_eight_two_rush"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four_rush",
+      "name": "Bed Wars - Rush 4v4v4v4",
+      "command": "/play bedwars_four_four_rush"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two_ultimate",
+      "name": "Bed Wars - Ultimate Doubles",
+      "command": "/play bedwars_eight_two_ultimate"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four_ultimate",
+      "name": "Bed Wars - Ultimate 4v4v4v4",
+      "command": "/play bedwars_four_four_ultimate"
+    },
+    {
+      "namespace": "bedwars/play bedwars_castle",
+      "name": "Bed Wars - Castle 40v40",
+      "command": "/play bedwars_castle"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two_lucky",
+      "name": "Bed Wars - Lucky V2 Doubles",
+      "command": "/play bedwars_eight_two_lucky"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four_lucky",
+      "name": "Bed Wars - Lucky V2 4v4v4v4",
+      "command": "/play bedwars_four_four_lucky"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two_voidless",
+      "name": "Bed Wars - Voidless Doubles",
+      "command": "/play bedwars_eight_two_voidless"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four_voidless",
+      "name": "Bed Wars - Voidless 4v4v4v4",
+      "command": "/play bedwars_four_four_voidless"
+    },
+    {
+      "namespace": "bedwars/play bedwars_eight_two_armed",
+      "name": "Bed Wars - Armed Doubles",
+      "command": "/play bedwars_eight_two_armed"
+    },
+    {
+      "namespace": "bedwars/play bedwars_four_four_armed",
+      "name": "Bed Wars - Armed 4v4v4v4",
+      "command": "/play bedwars_four_four_armed"
+    },
+    {
+      "namespace": "blitz/quickplaylobby blitz 1",
+      "name": "Blitz SG - Go to Lobby One",
+      "command": "/quickplaylobby blitz 1"
+    },
+    {
+      "namespace": "blitz/play blitz_solo_normal",
+      "name": "Blitz SG - Solo",
+      "command": "/play blitz_solo_normal"
+    },
+    {
+      "namespace": "blitz/play blitz_teams_normal",
+      "name": "Blitz SG - Teams",
+      "command": "/play blitz_teams_normal"
+    },
+    {
+      "namespace": "blitz/play duels_blitz_duel",
+      "name": "Blitz SG - 1v1 Duels",
+      "command": "/play duels_blitz_duel"
+    },
+    {
+      "namespace": "buildBattle/quickplaylobby bb 1",
+      "name": "Build Battle - Go to Lobby One",
+      "command": "/quickplaylobby bb 1"
+    },
+    {
+      "namespace": "buildBattle/play build_battle_solo_normal",
+      "name": "Build Battle - Solo",
+      "command": "/play build_battle_solo_normal"
+    },
+    {
+      "namespace": "buildBattle/play build_battle_teams_normal",
+      "name": "Build Battle - Teams",
+      "command": "/play build_battle_teams_normal"
+    },
+    {
+      "namespace": "buildBattle/play build_battle_solo_pro",
+      "name": "Build Battle - Pro",
+      "command": "/play build_battle_solo_pro"
+    },
+    {
+      "namespace": "buildBattle/play build_battle_guess_the_build",
+      "name": "Build Battle - Guess the Build",
+      "command": "/play build_battle_guess_the_build"
+    },
+    {
+      "namespace": "classic/quickplaylobby classic 1",
+      "name": "Classic Games - Go to Lobby One",
+      "command": "/quickplaylobby classic 1"
+    },
+    {
+      "namespace": "classic/play arena_1v1",
+      "name": "Classic Games - Arena Brawl 1v1",
+      "command": "/play arena_1v1"
+    },
+    {
+      "namespace": "classic/play arena_2v2",
+      "name": "Classic Games - Arena Brawl 2v2",
+      "command": "/play arena_2v2"
+    },
+    {
+      "namespace": "classic/play arena_4v4",
+      "name": "Classic Games - Arena Brawl 4v4",
+      "command": "/play arena_4v4"
+    },
+    {
+      "namespace": "classic/play paintball",
+      "name": "Classic Games - Paintball",
+      "command": "/play paintball"
+    },
+    {
+      "namespace": "classic/play quake_solo",
+      "name": "Classic Games - Quakecraft Solo",
+      "command": "/play quake_solo"
+    },
+    {
+      "namespace": "classic/play quake_teams",
+      "name": "Classic Games - Quakecraft Teams",
+      "command": "/play quake_teams"
+    },
+    {
+      "namespace": "classic/play walls",
+      "name": "Classic Games - The Walls",
+      "command": "/play walls"
+    },
+    {
+      "namespace": "classic/play tkr",
+      "name": "Classic Games - Turbo Kart Racers",
+      "command": "/play tkr"
+    },
+    {
+      "namespace": "classic/play vampirez",
+      "name": "Classic Games - VampireZ",
+      "command": "/play vampirez"
+    },
+    {
+      "namespace": "cvc/quickplaylobby cvc 1",
+      "name": "Cops and Crims - Go to Lobby One",
+      "command": "/quickplaylobby cvc 1"
+    },
+    {
+      "namespace": "cvc/play mcgo_normal",
+      "name": "Cops and Crims - Defusal",
+      "command": "/play mcgo_normal"
+    },
+    {
+      "namespace": "cvc/play mcgo_deathmatch",
+      "name": "Cops and Crims - Team Deathmatch",
+      "command": "/play mcgo_deathmatch"
+    },
+    {
+      "namespace": "cvc/play mcgo_normal_party",
+      "name": "Cops and Crims - Defusal Party",
+      "command": "/play mcgo_normal_party"
+    },
+    {
+      "namespace": "cvc/play mcgo_deathmatch_party",
+      "name": "Cops and Crims - Team Deathmatch Party",
+      "command": "/play mcgo_deathmatch_party"
+    },
+    {
+      "namespace": "duels/quickplaylobby duels 1",
+      "name": "Duels - Go to Lobby One",
+      "command": "/quickplaylobby duels 1"
+    },
+    {
+      "namespace": "duels/play duels_blitz_duel",
+      "name": "Duels - Blitz 1v1",
+      "command": "/play duels_blitz_duel"
+    },
+    {
+      "namespace": "duels/play duels_bow_duel",
+      "name": "Duels - Bow 1v1",
+      "command": "/play duels_bow_duel"
+    },
+    {
+      "namespace": "duels/play duels_bowspleef_duel",
+      "name": "Duels - Bow Spleef 1v1",
+      "command": "/play duels_bowspleef_duel"
+    },
+    {
+      "namespace": "duels/play duels_classic_duel",
+      "name": "Duels - Classic 1v1",
+      "command": "/play duels_classic_duel"
+    },
+    {
+      "namespace": "duels/play duels_combo_duel",
+      "name": "Duels - Combo 1v1",
+      "command": "/play duels_combo_duel"
+    },
+    {
+      "namespace": "duels/play duels_sumo_duel",
+      "name": "Duels - Sumo 1v1",
+      "command": "/play duels_sumo_duel"
+    },
+    {
+      "namespace": "duels/play duels_mw_duel",
+      "name": "Duels - MegaWalls 1v1",
+      "command": "/play duels_mw_duel"
+    },
+    {
+      "namespace": "duels/play duels_mw_doubles",
+      "name": "Duels - MegaWalls 2v2",
+      "command": "/play duels_mw_doubles"
+    },
+    {
+      "namespace": "duels/play duels_potion_duel",
+      "name": "Duels - NoDebuff 1v1",
+      "command": "/play duels_potion_duel"
+    },
+    {
+      "namespace": "duels/play duels_op_duel",
+      "name": "Duels - OP 1v1",
+      "command": "/play duels_op_duel"
+    },
+    {
+      "namespace": "duels/play duels_op_doubles",
+      "name": "Duels - OP 2v2",
+      "command": "/play duels_op_doubles"
+    },
+    {
+      "namespace": "duels/play duels_sw_duel",
+      "name": "Duels - SkyWars 1v1",
+      "command": "/play duels_sw_duel"
+    },
+    {
+      "namespace": "duels/play duels_sw_doubles",
+      "name": "Duels - SkyWars 2v2",
+      "command": "/play duels_sw_doubles"
+    },
+    {
+      "namespace": "duels/play duels_uhc_duel",
+      "name": "Duels - 1v1 Duels",
+      "command": "/play duels_uhc_duel"
+    },
+    {
+      "namespace": "duels/play duels_uhc_doubles",
+      "name": "Duels - 2v2 Duels",
+      "command": "/play duels_uhc_doubles"
+    },
+    {
+      "namespace": "duels/play duels_uhc_four",
+      "name": "Duels - 4v4 Duels",
+      "command": "/play duels_uhc_four"
+    },
+    {
+      "namespace": "duels/play duels_uhc_meetup",
+      "name": "Duels - Deathmatch",
+      "command": "/play duels_uhc_meetup"
+    },
+    {
+      "namespace": "duels/play duels_bridge_duel",
+      "name": "Duels - The Bridge 1v1",
+      "command": "/play duels_bridge_duel"
+    },
+    {
+      "namespace": "duels/play duels_bridge_doubles",
+      "name": "Duels - The Bridge 2v2",
+      "command": "/play duels_bridge_doubles"
+    },
+    {
+      "namespace": "duels/play duels_bridge_2v2v2v2",
+      "name": "Duels - The Bridge 2v2v2v2",
+      "command": "/play duels_bridge_2v2v2v2"
+    },
+    {
+      "namespace": "duels/play duels_bridge_3v3v3v3",
+      "name": "Duels - The Bridge 3v3v3v3",
+      "command": "/play duels_bridge_3v3v3v3"
+    },
+    {
+      "namespace": "duels/play duels_bridge_four",
+      "name": "Duels - The Bridge 4v4",
+      "command": "/play duels_bridge_four"
+    },
+    {
+      "namespace": "housing/quickplaylobby housing 1",
+      "name": "Housing - Go to Lobby One",
+      "command": "/quickplaylobby housing 1"
+    },
+    {
+      "namespace": "housing/home",
+      "name": "Housing - Go Home",
+      "command": "/home"
+    },
+    {
+      "namespace": "housing/housing random",
+      "name": "Housing - Join a random house",
+      "command": "/housing random"
+    },
+    {
+      "namespace": "mw/quickplaylobby mw 1",
+      "name": "Mega Walls - Go to Lobby One",
+      "command": "/quickplaylobby mw 1"
+    },
+    {
+      "namespace": "mw/play mw_standard",
+      "name": "Mega Walls - Standard",
+      "command": "/play mw_standard"
+    },
+    {
+      "namespace": "mw/play mw_face_off",
+      "name": "Mega Walls - Face off",
+      "command": "/play mw_face_off"
+    },
+    {
+      "namespace": "mw/play duels_mw_duel",
+      "name": "Mega Walls - 1v1 Duels",
+      "command": "/play duels_mw_duel"
+    },
+    {
+      "namespace": "mw/play duels_mw_doubles",
+      "name": "Mega Walls - 2v2 Duels",
+      "command": "/play duels_mw_doubles"
+    },
+    {
+      "namespace": "murder/quickplaylobby mm 1",
+      "name": "Murder Mystery - Go to Lobby One",
+      "command": "/quickplaylobby mm 1"
+    },
+    {
+      "namespace": "murder/play murder_classic",
+      "name": "Murder Mystery - Classic",
+      "command": "/play murder_classic"
+    },
+    {
+      "namespace": "murder/play murder_assassins",
+      "name": "Murder Mystery - Assassins",
+      "command": "/play murder_assassins"
+    },
+    {
+      "namespace": "murder/play murder_infection",
+      "name": "Murder Mystery - Infection V2",
+      "command": "/play murder_infection"
+    },
+    {
+      "namespace": "murder/play murder_double_up",
+      "name": "Murder Mystery - Double Up!",
+      "command": "/play murder_double_up"
+    },
+    {
+      "namespace": "prototype/quickplaylobby ptl 1",
+      "name": "Prototype - Go to Lobby One",
+      "command": "/quickplaylobby ptl 1"
+    },
+    {
+      "namespace": "prototype/play sb",
+      "name": "Prototype - SkyBlock",
+      "command": "/play sb"
+    },
+    {
+      "namespace": "prototype/play prototype_towerwars_solo",
+      "name": "Prototype - TowerWars - Solo",
+      "command": "/play prototype_towerwars_solo"
+    },
+    {
+      "namespace": "prototype/play prototype_towerwars_team_of_two",
+      "name": "Prototype - TowerWars - Team of Two",
+      "command": "/play prototype_towerwars_team_of_two"
+    },
+    {
+      "namespace": "skyblock/play sb",
+      "name": "SkyBlock - Join SkyBlock",
+      "command": "/play sb"
+    },
+    {
+      "namespace": "skyblock/warp home",
+      "name": "SkyBlock - Warp to your Private Island",
+      "command": "/warp home"
+    },
+    {
+      "namespace": "skyblock/warp hub",
+      "name": "SkyBlock - Warp to the SkyBlock Hub",
+      "command": "/warp hub"
+    },
+    {
+      "namespace": "skyblock/warp da",
+      "name": "SkyBlock - Warp to the Dark Auction",
+      "command": "/warp da"
+    },
+    {
+      "namespace": "skyblock/warp crypt",
+      "name": "SkyBlock - Warp to the Crypts",
+      "command": "/warp crypt"
+    },
+    {
+      "namespace": "skyblock/warp castle",
+      "name": "SkyBlock - Warp to the Castle",
+      "command": "/warp castle"
+    },
+    {
+      "namespace": "skyblock/warp dungeon_hub",
+      "name": "SkyBlock - Warp to the Dungeon Hub",
+      "command": "/warp dungeon_hub"
+    },
+    {
+      "namespace": "skyblock/warp barn",
+      "name": "SkyBlock - Warp to The Barn",
+      "command": "/warp barn"
+    },
+    {
+      "namespace": "skyblock/warp desert",
+      "name": "SkyBlock - Warp to the Mushroom Desert",
+      "command": "/warp desert"
+    },
+    {
+      "namespace": "skyblock/warp gold",
+      "name": "SkyBlock - Warp to the Gold Mine",
+      "command": "/warp gold"
+    },
+    {
+      "namespace": "skyblock/warp deep",
+      "name": "SkyBlock - Warp to the Deep Caverns",
+      "command": "/warp deep"
+    },
+    {
+      "namespace": "skyblock/warp mines",
+      "name": "SkyBlock - Warp to the Dwarven Mines",
+      "command": "/warp mines"
+    },
+    {
+      "namespace": "skyblock/warp spider",
+      "name": "SkyBlock - Warp to the Spider\u0027s Den",
+      "command": "/warp spider"
+    },
+    {
+      "namespace": "skyblock/warp nest",
+      "name": "SkyBlock - Warp to the Top of the Spider\u0027s Den",
+      "command": "/warp nest"
+    },
+    {
+      "namespace": "skyblock/warp nether",
+      "name": "SkyBlock - Warp to the Blazing Fortress",
+      "command": "/warp nether"
+    },
+    {
+      "namespace": "skyblock/warp magma",
+      "name": "SkyBlock - Warp to the Magma Boss",
+      "command": "/warp magma"
+    },
+    {
+      "namespace": "skyblock/warp end",
+      "name": "SkyBlock - Warp to The End",
+      "command": "/warp end"
+    },
+    {
+      "namespace": "skyblock/warp drag",
+      "name": "SkyBlock - Warp to the Dragon\u0027s Nest",
+      "command": "/warp drag"
+    },
+    {
+      "namespace": "skyblock/warp park",
+      "name": "SkyBlock - Warp to The Park",
+      "command": "/warp park"
+    },
+    {
+      "namespace": "skyblock/warp jungle",
+      "name": "SkyBlock - Warp to the Jungle",
+      "command": "/warp jungle"
+    },
+    {
+      "namespace": "skyblock/warp howl",
+      "name": "SkyBlock - Warp to the Howling Cave",
+      "command": "/warp howl"
+    },
+    {
+      "namespace": "skywars/quickplaylobby sw 1",
+      "name": "SkyWars - Go to Lobby One",
+      "command": "/quickplaylobby sw 1"
+    },
+    {
+      "namespace": "skywars/play solo_normal",
+      "name": "SkyWars - Solo Normal",
+      "command": "/play solo_normal"
+    },
+    {
+      "namespace": "skywars/play solo_insane",
+      "name": "SkyWars - Solo Insane",
+      "command": "/play solo_insane"
+    },
+    {
+      "namespace": "skywars/play teams_normal",
+      "name": "SkyWars - Doubles Normal",
+      "command": "/play teams_normal"
+    },
+    {
+      "namespace": "skywars/play teams_insane",
+      "name": "SkyWars - Doubles Insane",
+      "command": "/play teams_insane"
+    },
+    {
+      "namespace": "skywars/play ranked_normal",
+      "name": "SkyWars - Ranked",
+      "command": "/play ranked_normal"
+    },
+    {
+      "namespace": "skywars/play mega_normal",
+      "name": "SkyWars - Mega",
+      "command": "/play mega_normal"
+    },
+    {
+      "namespace": "skywars/play mega_doubles",
+      "name": "SkyWars - Mega Doubles",
+      "command": "/play mega_doubles"
+    },
+    {
+      "namespace": "skywars/play solo_insane_tnt_madness",
+      "name": "SkyWars - Solo - TNT Madness",
+      "command": "/play solo_insane_tnt_madness"
+    },
+    {
+      "namespace": "skywars/play teams_insane_tnt_madness",
+      "name": "SkyWars - Doubles - TNT Madness",
+      "command": "/play teams_insane_tnt_madness"
+    },
+    {
+      "namespace": "skywars/play solo_insane_lucky",
+      "name": "SkyWars - Solo - Lucky Blocks",
+      "command": "/play solo_insane_lucky"
+    },
+    {
+      "namespace": "skywars/play teams_insane_lucky",
+      "name": "SkyWars - Doubles - Lucky Blocks",
+      "command": "/play teams_insane_lucky"
+    },
+    {
+      "namespace": "skywars/play solo_insane_rush",
+      "name": "SkyWars - Solo - Rush",
+      "command": "/play solo_insane_rush"
+    },
+    {
+      "namespace": "skywars/play teams_insane_rush",
+      "name": "SkyWars - Doubles - Rush",
+      "command": "/play teams_insane_rush"
+    },
+    {
+      "namespace": "skywars/play solo_insane_slime",
+      "name": "SkyWars - Solo - Slime",
+      "command": "/play solo_insane_slime"
+    },
+    {
+      "namespace": "skywars/play teams_insane_slime",
+      "name": "SkyWars - Doubles - Slime",
+      "command": "/play teams_insane_slime"
+    },
+    {
+      "namespace": "skywars/play solo_insane_hunters_vs_beasts",
+      "name": "SkyWars - Hunters vs Beasts",
+      "command": "/play solo_insane_hunters_vs_beasts"
+    },
+    {
+      "namespace": "skywars/play duels_sw_duel",
+      "name": "SkyWars - 1v1 Duels",
+      "command": "/play duels_sw_duel"
+    },
+    {
+      "namespace": "skywars/play duels_sw_doubles",
+      "name": "SkyWars - 2v2 Duels",
+      "command": "/play duels_sw_doubles"
+    },
+    {
+      "namespace": "smashHeroes/quickplaylobby smash 1",
+      "name": "Smash Heroes - Go to Lobby One",
+      "command": "/quickplaylobby smash 1"
+    },
+    {
+      "namespace": "smashHeroes/play super_smash_solo_normal",
+      "name": "Smash Heroes - Solo",
+      "command": "/play super_smash_solo_normal"
+    },
+    {
+      "namespace": "smashHeroes/play super_smash_2v2_normal",
+      "name": "Smash Heroes - 2v2",
+      "command": "/play super_smash_2v2_normal"
+    },
+    {
+      "namespace": "smashHeroes/play super_smash_teams_normal",
+      "name": "Smash Heroes - 2v2v2",
+      "command": "/play super_smash_teams_normal"
+    },
+    {
+      "namespace": "smashHeroes/play super_smash_friends_normal",
+      "name": "Smash Heroes - Friends",
+      "command": "/play super_smash_friends_normal"
+    },
+    {
+      "namespace": "smashHeroes/play super_smash_1v1_normal",
+      "name": "Smash Heroes - 1v1",
+      "command": "/play super_smash_1v1_normal"
+    },
+    {
+      "namespace": "thePit/play pit",
+      "name": "The Pit - Play The Pit",
+      "command": "/play pit"
+    },
+    {
+      "namespace": "tnt/quickplaylobby tnt 1",
+      "name": "TNT Games - Go to Lobby One",
+      "command": "/quickplaylobby tnt 1"
+    },
+    {
+      "namespace": "tnt/play tnt_tntrun",
+      "name": "TNT Games - TNT Run",
+      "command": "/play tnt_tntrun"
+    },
+    {
+      "namespace": "tnt/play tnt_pvprun",
+      "name": "TNT Games - PVP Run",
+      "command": "/play tnt_pvprun"
+    },
+    {
+      "namespace": "tnt/play tnt_bowspleef",
+      "name": "TNT Games - Bow Spleef",
+      "command": "/play tnt_bowspleef"
+    },
+    {
+      "namespace": "tnt/play tnt_tntag",
+      "name": "TNT Games - TNT Tag",
+      "command": "/play tnt_tntag"
+    },
+    {
+      "namespace": "tnt/play tnt_capture",
+      "name": "TNT Games - Wizards",
+      "command": "/play tnt_capture"
+    },
+    {
+      "namespace": "tnt/play duels_bowspleef_duel",
+      "name": "TNT Games - Bow Spleef Duels",
+      "command": "/play duels_bowspleef_duel"
+    },
+    {
+      "namespace": "uhc/quickplaylobby uhc 1",
+      "name": "UHC Champions - Go to Lobby One",
+      "command": "/quickplaylobby uhc 1"
+    },
+    {
+      "namespace": "uhc/play uhc_solo",
+      "name": "UHC Champions - Solo",
+      "command": "/play uhc_solo"
+    },
+    {
+      "namespace": "uhc/play uhc_teams",
+      "name": "UHC Champions - Teams of 3",
+      "command": "/play uhc_teams"
+    },
+    {
+      "namespace": "uhc/play speed_solo_normal",
+      "name": "UHC Champions - Speed Solo Normal",
+      "command": "/play speed_solo_normal"
+    },
+    {
+      "namespace": "uhc/play speed_team_normal",
+      "name": "UHC Champions - Speed Teams Normal",
+      "command": "/play speed_team_normal"
+    },
+    {
+      "namespace": "uhc/play duels_uhc_duel",
+      "name": "UHC Champions - 1v1 Duels",
+      "command": "/play duels_uhc_duel"
+    },
+    {
+      "namespace": "uhc/play duels_uhc_doubles",
+      "name": "UHC Champions - 2v2 Duels",
+      "command": "/play duels_uhc_doubles"
+    },
+    {
+      "namespace": "uhc/play duels_uhc_four",
+      "name": "UHC Champions - 4v4 Duels",
+      "command": "/play duels_uhc_four"
+    },
+    {
+      "namespace": "uhc/play duels_uhc_meetup",
+      "name": "UHC Champions - Deathmatch",
+      "command": "/play duels_uhc_meetup"
+    },
+    {
+      "namespace": "warlords/quickplaylobby warlords 1",
+      "name": "Warlords - Go to Lobby One",
+      "command": "/quickplaylobby warlords 1"
+    },
+    {
+      "namespace": "warlords/play warlords_ctf_mini",
+      "name": "Warlords - Capture the Flag",
+      "command": "/play warlords_ctf_mini"
+    },
+    {
+      "namespace": "warlords/play warlords_domination",
+      "name": "Warlords - Domination",
+      "command": "/play warlords_domination"
+    },
+    {
+      "namespace": "warlords/play warlords_team_deathmatch",
+      "name": "Warlords - Team Deathmatch",
+      "command": "/play warlords_team_deathmatch"
+    },
+    {
+      "namespace": "tournament/quickplaylobby th 1",
+      "name": "Tournament Lobby - Go to Lobby One",
+      "command": "/quickplaylobby th 1"
+    },
+    {
+      "namespace": "tournament/playtourney",
+      "name": "Tournament Lobby - ?c?lJoin Tournament",
+      "command": "/playtourney"
+    }
+  ]
+}

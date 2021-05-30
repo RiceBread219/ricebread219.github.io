@@ -1,0 +1,22 @@
+
+[general]
+
+	[general.general]
+		colour = 0
+		height_limit_mod = true
+		update_notify = true
+
+[bedwars]
+
+	[bedwars.sound]
+		play_a_sound = false
+		sound = 0
+		spam_the_sound = false
+		notify_blocks = 10
+
+	[bedwars.bedwars]
+		height_limit_mod_bedwars = true
+		max_height = true
+		height_left = true
+		map = true
+

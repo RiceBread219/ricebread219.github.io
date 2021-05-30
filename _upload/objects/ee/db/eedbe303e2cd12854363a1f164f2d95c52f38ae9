@@ -1,0 +1,18 @@
+
+[general]
+
+	[general.general]
+		casual_autogg = false
+		autogg = true
+		delay = 1000
+		phrase = 1
+
+	[general.miscellaneous]
+		anti_karma = false
+		antigg = false
+
+	[general.secondary_message]
+		second_message_delay = 1000
+		phrase = 1
+		second_message = false
+

@@ -1,0 +1,30 @@
+class NotificationTracker {
+    constructor() {
+        this.activeNotifications = []
+        this.isDrawing = false
+    }
+
+    addNotification(notification) {
+        this.activeNotifications.push(notification)
+    }
+
+    getLatestNotification() {
+        return this.activeNotifications[0]
+    }
+
+    getLastNotification() {
+        return this.activeNotifications[this.activeNotifications.length]
+    }
+
+    removeNotification(notification) {
+        // Cleanup cleanup 
+        notification.delete()
+        this.activeNotifications.splice(this.activeNotifications.indexOf(notification), 1)
+    }
+}
+
+
+// SINGLETON
+const instance = new NotificationTracker()
+
+export { instance as default }

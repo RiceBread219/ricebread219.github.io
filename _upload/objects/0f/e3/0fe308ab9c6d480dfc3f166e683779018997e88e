@@ -1,0 +1,37 @@
+{
+  "date": {
+    "year": 2021,
+    "month": 5,
+    "day": 24
+  },
+  "tipsSent": 13,
+  "tipsReceived": 5,
+  "xpSent": 650,
+  "xpReceived": 300,
+  "gameStatistics": {
+    "Turbo Kart Racers": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    },
+    "VampireZ": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    },
+    "UHC Champions": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    },
+    "Quakecraft": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    },
+    "Paintball Warfare": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    },
+    "The Walls": {
+      "coinsSent": 15,
+      "coinsReceived": 0
+    }
+  }
+}

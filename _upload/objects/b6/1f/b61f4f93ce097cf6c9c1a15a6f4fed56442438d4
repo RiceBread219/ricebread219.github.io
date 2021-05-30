@@ -1,0 +1,3 @@
+import PersistantVariableFactory from './PersistentVariableFactory';
+
+export { PersistantVariableFactory as default };

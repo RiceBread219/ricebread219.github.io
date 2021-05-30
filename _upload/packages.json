@@ -1,0 +1,12 @@
+{
+  "minimumVersion" : 1,
+  "packages" : [
+    {
+      "title" : "Bread Client - 1.8.9",
+      "name" : "Bread Client - 1.8.9",
+      "version" : "1.1",
+      "location" : "bread-client---1.8.9.json",
+      "priority" : 0
+    }
+  ]
+}
